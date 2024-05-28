@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="imgs/logo.png">
+    <!-- ^font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- ^bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ^animation library -->
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- ^main css file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- loading icon -->
+    <div class="loading">
+        <i class="fa-solid fa-spinner fa-spin fa-4x"></i>
+    </div>
+    <!-- star background animation -->
+    <div class="stars"></div>
+    <!-- side bar -->
+    <aside class="position-fixed top-0 bottom-0 d-flex">
+        <div class="leftSide p-4">
+            <ul class="overflow-hidden">
+                <li class="position-relative fw-bold" onclick="addSearchBar()">Search</li>
+                <li class="position-relative fw-bold" onclick="getCategory()">Categories</li>
+                <li class="position-relative fw-bold" onclick="getArea()">Area</li>
+                <li class="position-relative fw-bold" onclick="getIngredients()">Ingredients</li>
+                <li class="position-relative fw-bold" onclick="displayContact()">Contact Us</li>
+            </ul>
+            <div class="social">
+                <div class="socialIcons mb-1">
+                    <a href=""><i class="fa-brands fa-facebook-f me-2 iconHover"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter me-2 iconHover"></i></a>
+                    <a href=""><i class="fa-solid fa-globe me-2 iconHover"></i></a>
+                </div>
+                <p>Copyright Â© 2019 All Rights <br> Reserved.</p>
+            </div>
+        </div>
+        <div class="rightSide py-4 px-2">
+            <a href="#home" id="logo"><img src="imgs/logo.png" class="logo" alt="logo image"></a>
+            <i class="fa-solid fa-align-justify fa-2x open-close-icon"></i>
+            <div class="social d-flex flex-column">
+                <a href=""><i class="fa-solid fa-globe iconHover"></i></a>
+                <a href=""><i class="fa-solid fa-share-nodes iconHover"></i></a>
+            </div>
+        </div>
+    </aside>
+    <!-- home section -->
+    <section id="home" class="home vh-100 py-5 text-center">
+        <div class="inner-loading">
+            <i class="fa-solid fa-spinner fa-spin fa-4x"></i>
+        </div>
+        <div class="container" id="searchContainer"></div>
+        <div class="container" id="mainContainer">
+            <div class="row gy-4 pb-5" id="row">
+            </div>
+        </div>
+        <div id="contact" class="container d-none h-100 d-flex align-items-center justify-content-center">
+            <div class="row gy-3">
+                <div class="col-md-6">
+                    <input type="text" id="username" class="form-control" placeholder="Enter Your Name">
+                    <div id="nameAlert" class="alert alert-danger mt-2 d-none" role="alert">min 3 alphabet</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" id="userMail" class="form-control" placeholder="Enter Your Email">
+                    <div id="mailAlert" class="alert alert-danger mt-2 d-none" role="alert">Email not valid *exemple@yyy.zzz</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="tel" id="userPhone" class="form-control" placeholder="Enter Your Phone">
+                    <div id="phoneAlert" class="alert alert-danger mt-2 d-none" role="alert">Enter valid Phone Number</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" id="userAge" class="form-control" placeholder="Enter Your Age">
+                    <div id="ageAlert" class="alert alert-danger mt-2 d-none" role="alert">Enter valid age</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" id="userPass" class="form-control" placeholder="Enter Your Password">
+                    <div id="passAlert" class="alert alert-danger mt-2 d-none" role="alert">Enter valid password *Minimum eight characters, at least one letter and one number</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" id="userRe-pass" class="form-control" placeholder="Re-password">
+                    <div id="re-passAlert" class="alert alert-danger mt-2 d-none" role="alert">Enter valid re-password</div>
+                </div>
+                <button id="submitBtn" class="btn btn-outline-danger w-auto mx-auto" disabled>Submit</button>
+            </div>
+        </div>
+    </section>
+    <!-- details section -->
+    <section id="details" class="details d-none py-5">
+        <div class="inner-loading">
+            <i class="fa-solid fa-spinner fa-spin fa-4x"></i>
+        </div>
+        <div class="container">
+            <div class="row" id="detailsContent"></div>
+        </div>
+    </section>
+    <!-- ^bootstrap js file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ^ animation library -->
+    <script src="js/aos.js"></script>
+    <!-- ^jquery library -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- ^main js file -->
+    <script src="js/index.js"></script>
+    </body>
+
+</html>
